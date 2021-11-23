@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col ></ion-col>
+      <ion-col >
+
+        <ion-img style="width: 200px; height: 200px;" 
+        src="https://img.freepik.com/vector-gratis/ilustracion-concepto-abstracto-pagina-inicio-sesion_335657-3875.jpg?size=338&ext=jpg&ga=GA1.2.2008272138.1632787200">
+
+        </ion-img>
+        <ion-item>
+          <ion-label position="floating"> <strong>Correo Electronico</strong> </ion-label>
+          <ion-input type="email" [(ngModel)]="loginForm.correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" ><strong>Contraseña</strong></ion-label>
+          <ion-input type="password" [(ngModel)]="loginForm.contrasenia"></ion-input>
+        </ion-item>
+
+
+        <br>
+        <ion-text color="danger">
+          <h4 >{{message}}</h4>
+        </ion-text>
+
+        <ion-button expand="block" (click)="comparePass()"> Iniciar Sesion </ion-button>
+        <ion-button expand="block" [routerLink]="['/']"> Registrarme </ion-button>
+
+
+
+      </ion-col>
+      <ion-col >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
